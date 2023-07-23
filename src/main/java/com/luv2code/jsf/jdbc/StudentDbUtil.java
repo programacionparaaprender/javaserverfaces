@@ -18,7 +18,9 @@ public class StudentDbUtil {
 
 	private static StudentDbUtil instance;
 	private DataSource dataSource;
-	private String jndiName = "java:comp/env/jdbc/student_tracker";
+	//private String jndiName = "java:comp/env/jdbc/student_tracker";
+	private String jndiName = "java:comp/env/jdbc/student_tracker_sqlserver";
+	
 	
 	public static StudentDbUtil getInstance() throws Exception {
 		if (instance == null) {
@@ -29,17 +31,10 @@ public class StudentDbUtil {
 	}
 	
 	private StudentDbUtil() throws Exception {		
-		//dataSource = getDataSource();
+		dataSource = getDataSource();
 	}
 
 	private DataSource getDataSource() throws NamingException {
-		return getDataSourceMysql();
-	}
-	
-
-	
-	
-	private DataSource getDataSourceMysql() throws NamingException {
 		Context context = new InitialContext();
 		
 		DataSource theDataSource = (DataSource) context.lookup(jndiName);
@@ -205,25 +200,6 @@ public class StudentDbUtil {
 	}	
 	
 	private Connection getConnection() throws Exception {
-		return getConnectionSqlServer();
-	}
-	
-	private Connection getConnectionSqlServer() throws Exception {
-		Connection conexion=null; 
- 	     try {
- 	          Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
- 	          String connectionUrl = "jdbc:sqlserver://localhost:1433;" +
- 	            "databaseName=QuirkyBookProject;user=sa;password=123;";
- 	          conexion = DriverManager.getConnection(connectionUrl);
- 	        } catch (SQLException e) {
- 	            System.out.println("SQL Exception: "+ e.toString());
- 	        } catch (ClassNotFoundException cE) {
- 	            System.out.println("Class Not Found Exception: "+ cE.toString());
- 	        }
-		return conexion;
-	}
-	
-	private Connection getConnectionMysql() throws Exception {
 
 		Connection theConn = dataSource.getConnection();
 		
@@ -254,3 +230,4 @@ public class StudentDbUtil {
 		}
 	}	
 }
+
