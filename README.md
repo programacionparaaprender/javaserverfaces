@@ -7,6 +7,9 @@
 ### Repositorio de librerias java
 >- mvnrepository.com
 
+### proyecto sin maven
+>- https://github.com/programacionparaaprender/jdbc-student-tracker-final
+
 ### actualización importante de realizar
 >- https://stackoverflow.com/questions/38040947/the-type-managedbean-is-deprecated
 
