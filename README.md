@@ -5,6 +5,7 @@
 
 ### driver oracle para conectarse a base de datos
 >- https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html
+>- nuevo enlace
 
 ### Repositorio de librerias java
 >- mvnrepository.com
