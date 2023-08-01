@@ -3,6 +3,8 @@
 >- https://www.udemy.com/course/jsf-tutorial/learn/lecture/2617738#overview
 
 
+### driver oracle para conectarse a base de datos
+>- https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html
 
 ### Repositorio de librerias java
 >- mvnrepository.com
