@@ -7,6 +7,12 @@
 >- https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html
 >- nuevo enlace
 
+### tablas autoincrementales
+>- https://es.stackoverflow.com/questions/524710/crear-un-primary-key-auto-increment-en-oracle
+
+### tablas autoincrementales
+>- https://es.stackoverflow.com/questions/524710/crear-un-primary-key-auto-increment-en-oracle
+
 ### Repositorio de librerias java
 >- mvnrepository.com
 
